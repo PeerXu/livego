@@ -1,15 +1,16 @@
 package httpflv
 
 import (
-	"time"
 	"errors"
 	"fmt"
 	"log"
 	"net/http"
-	"github.com/gwuhaolin/livego/utils/uid"
-	"github.com/gwuhaolin/livego/protocol/amf"
-	"github.com/gwuhaolin/livego/av"
-	"github.com/gwuhaolin/livego/utils/pio"
+	"time"
+
+	"github.com/PeerXu/livego/av"
+	"github.com/PeerXu/livego/protocol/amf"
+	"github.com/PeerXu/livego/utils/pio"
+	"github.com/PeerXu/livego/utils/uid"
 )
 
 const (
@@ -152,8 +153,6 @@ func (flvWriter *FLVWriter) SendPacket() error {
 		}
 
 	}
-
-	return nil
 }
 
 func (flvWriter *FLVWriter) Wait() {

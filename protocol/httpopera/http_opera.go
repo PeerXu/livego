@@ -3,13 +3,14 @@ package httpopera
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/gwuhaolin/livego/protocol/rtmp/rtmprelay"
 	"io"
+	"log"
 	"net"
 	"net/http"
-	"log"
-	"github.com/gwuhaolin/livego/av"
-	"github.com/gwuhaolin/livego/protocol/rtmp"
+
+	"github.com/PeerXu/livego/av"
+	"github.com/PeerXu/livego/protocol/rtmp"
+	"github.com/PeerXu/livego/protocol/rtmp/rtmprelay"
 )
 
 type Response struct {
@@ -79,10 +80,10 @@ type stream struct {
 	Key             string `json:"key"`
 	Url             string `json:"Url"`
 	StreamId        uint32 `json:"StreamId"`
-	VideoTotalBytes uint64 `json:123456`
-	VideoSpeed      uint64 `json:123456`
-	AudioTotalBytes uint64 `json:123456`
-	AudioSpeed      uint64 `json:123456`
+	VideoTotalBytes uint64 `json:"-"`
+	VideoSpeed      uint64 `json:"-"`
+	AudioTotalBytes uint64 `json:"-"`
+	AudioSpeed      uint64 `json:"-"`
 }
 
 type streams struct {

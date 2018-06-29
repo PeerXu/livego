@@ -4,17 +4,18 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"github.com/gwuhaolin/livego/av"
-	"github.com/gwuhaolin/livego/configure"
-	"github.com/gwuhaolin/livego/container/flv"
-	"github.com/gwuhaolin/livego/protocol/rtmp/core"
-	"github.com/gwuhaolin/livego/utils/uid"
 	"log"
 	"net"
 	"net/url"
 	"reflect"
 	"strings"
 	"time"
+
+	"github.com/PeerXu/livego/av"
+	"github.com/PeerXu/livego/configure"
+	"github.com/PeerXu/livego/container/flv"
+	"github.com/PeerXu/livego/protocol/rtmp/core"
+	"github.com/PeerXu/livego/utils/uid"
 )
 
 const (
@@ -318,7 +319,6 @@ func (v *VirWriter) SendPacket() error {
 		}
 
 	}
-	return nil
 }
 
 func (v *VirWriter) Info() (ret av.Info) {
